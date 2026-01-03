@@ -11,7 +11,16 @@ ML knowledge from courses + notebooks.
 Main gap: production-grade ML engineering in Python.
 
 ## Current Project
-End-to-end Tabular ML System (classification or regression TBD)
+Customer Churn Prediction (Binary Classification)
+
+Dataset: Telco Customer Churn
+Target: Churn (0 = No, 1 = Yes)
+
+Primary metric: ROC-AUC
+Secondary metrics: Precision / Recall
+
+Business goal:
+Identify customers likely to churn so retention actions can be taken.
 
 ## Current Phase
 Week 0 — Problem definition & project setup
