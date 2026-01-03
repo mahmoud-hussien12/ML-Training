@@ -1,0 +1,24 @@
+[project]
+name = "ml-churn-project"
+version = "0.1.0"
+description = "Churn prediction project"
+authors = [
+    {name = "Mahmoud Hussien",email = "engmahmoudmohamed779@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pyyaml (>=6.0.3,<7.0.0)"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+packages = [
+    { include = "src" }
+]
+
+[tool.poetry.scripts]
+train = "train:main"
