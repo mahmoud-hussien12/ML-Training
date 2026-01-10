@@ -2,7 +2,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler, OneHotEncoder 
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import roc_auc_score, precision_score, recall_score, confusion_matrix
+from sklearn.metrics import roc_auc_score, precision_score, recall_score, confusion_matrix, f1_score
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import FunctionTransformer
 import numpy as np
@@ -103,3 +103,16 @@ def get_top_features(pipeline, top_k=10):
         )
         return fi
     return None
+
+def evaluate_threshold(y_true, y_proba, threshold):
+    y_true = np.asarray(y_true).ravel()
+    y_proba_pos = y_proba[:, 1]
+    y_pred = (y_proba_pos >= threshold).astype(int)
+
+    return {
+        "threshold": threshold,
+        "precision": precision_score(y_true, y_pred),
+        "recall": recall_score(y_true, y_pred),
+        "roc_auc": roc_auc_score(y_true, y_proba_pos),
+        "y_pred": y_pred
+    }

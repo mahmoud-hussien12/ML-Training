@@ -28,13 +28,15 @@ def main():
     logger.log_info(f"Splitting data into train, val, test sets")
     X_train, X_val, X_test, y_train, y_val, y_test = loader.split_data(df, cfg['data']['target_col'], cfg['training']['test_size'], cfg['training']['val_size'], cfg['project']['random_seed'])
     logger.log_info(f"Data split into train: {len(X_train)}, val: {len(X_val)}, test: {len(X_test)}")
+
+    #save train, val, test sets
+    loader.save_data(X_train, X_val, X_test, y_train, y_val, y_test, cfg['data']['train_path'], cfg['data']['val_path'], cfg['data']['test_path'])
+    logger.log_info(f"Data saved to {cfg['data']['train_path']}, {cfg['data']['val_path']}, {cfg['data']['test_path']}")
+
     #log train, val, test counts
-    counts, percentage = y_train.value_counts(), y_train.value_counts(normalize=True) * 100
-    val_counts, val_percentage = y_val.value_counts(), y_val.value_counts(normalize=True) * 100
-    test_counts, test_percentage = y_test.value_counts(), y_test.value_counts(normalize=True) * 100
-    logger.log_info(f"Data train counts: {counts} with percentage: {percentage}")
-    logger.log_info(f"Data val counts: {val_counts} with percentage: {val_percentage}")
-    logger.log_info(f"Data test counts: {test_counts} with percentage: {test_percentage}")
+    logger.log_info(f"Data train counts: {y_train.value_counts()} with percentage: {y_train.value_counts(normalize=True) * 100}")
+    logger.log_info(f"Data val counts: {y_val.value_counts()} with percentage: {y_val.value_counts(normalize=True) * 100}")
+    logger.log_info(f"Data test counts: {y_test.value_counts()} with percentage: {y_test.value_counts(normalize=True) * 100}")
     
     #get feature columns
     numerical_features, categorical_features = build_features.get_feature_columns(cfg)
@@ -80,6 +82,7 @@ def main():
     #get top features
     top_features = pipe.get_top_features(model, 10)
     logger.log_info(f"Top features: {top_features}")
+    
 if __name__ == "__main__":
     main()
 

@@ -25,3 +25,5 @@ packages = [
 
 [tool.poetry.scripts]
 train = "train:main"
+threshold = "threshold:main"
+predict = "predict:main"

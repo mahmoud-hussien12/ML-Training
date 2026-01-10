@@ -149,7 +149,13 @@ poetry install
 python train.py --config configs/base.yaml
 ```
 
-### 3️⃣ Run inference (example)
+### 3️⃣ Threshold tuning
+
+```bash
+python threshold.py --config configs/base.yaml # threshold tuning
+```
+
+### 4️⃣ Run inference (example)
 
 ```bash
 python predict.py --input data/raw/sample.csv
@@ -180,7 +186,7 @@ These artifacts can be reused for:
 * Avoided notebooks for training to simulate real production workflows
 * Selected model based on ROC-AUC metric
 * Selected top features using feature importance for lightgbm and cofficient for logistic regression
-
+* Selected threshold based on recall
 ---
 
 ## 🔮 Future Improvements

@@ -28,3 +28,17 @@ def split_data(
     X_train, X_val, y_train, y_val = train_test_split(X_train_val, y_train_val, test_size=val_size, random_state=random_state, stratify=y_train_val)
 
     return X_train, X_val, X_test, y_train, y_val, y_test
+
+def save_data(
+    X_train, X_val, X_test, y_train, y_val, y_test,
+    train_path: str, val_path: str, test_path: str
+):
+    """
+    Saves the train, val, test sets to the specified paths.
+    """
+    X_train.merge(y_train, left_index=True, right_index=True).to_csv(train_path, index=False)
+    X_val.merge(y_val, left_index=True, right_index=True).to_csv(val_path, index=False)
+    X_test.merge(y_test, left_index=True, right_index=True).to_csv(test_path, index=False)
+
+def load_data(path: str):
+    return load_raw_data(path)
