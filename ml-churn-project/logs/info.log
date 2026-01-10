@@ -1,0 +1,90 @@
+2026-01-10 18:08:27,145 [INFO] Loading config from configs/base.yaml
+2026-01-10 18:08:27,148 [INFO] Config: churn_prediction, seed: 42
+2026-01-10 18:08:27,148 [INFO] Loading raw data from data/raw/WA_Fn-UseC_-Telco-Customer-Churn.csv
+2026-01-10 18:08:27,183 [INFO] Data loaded with shape: (7043, 21)
+2026-01-10 18:08:27,183 [INFO] Splitting data into train, val, test sets
+2026-01-10 18:08:27,217 [INFO] Data split into train: 4225, val: 1409, test: 1409
+2026-01-10 18:08:27,221 [INFO] Data train counts: Churn
+0    3104
+1    1121
+Name: count, dtype: int64 with percentage: Churn
+0    73.467456
+1    26.532544
+Name: proportion, dtype: float64
+2026-01-10 18:08:27,222 [INFO] Data val counts: Churn
+0    1035
+1     374
+Name: count, dtype: int64 with percentage: Churn
+0    73.456352
+1    26.543648
+Name: proportion, dtype: float64
+2026-01-10 18:08:27,222 [INFO] Data test counts: Churn
+0    1035
+1     374
+Name: count, dtype: int64 with percentage: Churn
+0    73.456352
+1    26.543648
+Name: proportion, dtype: float64
+2026-01-10 18:08:27,222 [INFO] Numerical features: ['tenure', 'MonthlyCharges', 'TotalCharges'], 3 features
+2026-01-10 18:08:27,222 [INFO] Categorical features: ['gender', 'SeniorCitizen', 'Partner', 'Dependents', 'PhoneService', 'MultipleLines', 'InternetService', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV', 'StreamingMovies', 'Contract', 'PaperlessBilling', 'PaymentMethod'], 16 features
+2026-01-10 18:08:27,222 [INFO] Creating pipeline for logistic_regression
+2026-01-10 18:08:27,222 [INFO] logistic_regression Pipeline created
+2026-01-10 18:08:27,303 [INFO] logistic_regression Pipeline trained
+2026-01-10 18:08:27,319 [INFO] logistic_regression Pipeline evaluated
+2026-01-10 18:08:27,332 [INFO] logistic_regression Metrics: {'roc_auc': 0.7171381332506651, 'precision': 0.6578947368421053, 'recall': 0.5347593582887701, 'confusion_matrix': array([[931, 104],
+       [174, 200]])}
+2026-01-10 18:08:27,337 [INFO] logistic_regression Pipeline saved
+------------------------------------------------------------------------------
+2026-01-10 20:29:24,901 [INFO] Loading config from configs/base.yaml
+2026-01-10 20:29:24,904 [INFO] Config: churn_prediction, seed: 42
+2026-01-10 20:29:24,905 [INFO] Loading raw data from data/raw/WA_Fn-UseC_-Telco-Customer-Churn.csv
+2026-01-10 20:29:24,934 [INFO] Data loaded with shape: (7043, 21)
+2026-01-10 20:29:24,934 [INFO] Splitting data into train, val, test sets
+2026-01-10 20:29:24,949 [INFO] Data split into train: 4225, val: 1409, test: 1409
+2026-01-10 20:29:24,951 [INFO] Data train counts: Churn
+0    3104
+1    1121
+Name: count, dtype: int64 with percentage: Churn
+0    73.467456
+1    26.532544
+Name: proportion, dtype: float64
+2026-01-10 20:29:24,952 [INFO] Data val counts: Churn
+0    1035
+1     374
+Name: count, dtype: int64 with percentage: Churn
+0    73.456352
+1    26.543648
+Name: proportion, dtype: float64
+2026-01-10 20:29:24,952 [INFO] Data test counts: Churn
+0    1035
+1     374
+Name: count, dtype: int64 with percentage: Churn
+0    73.456352
+1    26.543648
+Name: proportion, dtype: float64
+2026-01-10 20:29:24,953 [INFO] Numerical features: ['tenure', 'MonthlyCharges', 'TotalCharges'], 3 features
+2026-01-10 20:29:24,953 [INFO] Categorical features: ['gender', 'SeniorCitizen', 'Partner', 'Dependents', 'PhoneService', 'MultipleLines', 'InternetService', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV', 'StreamingMovies', 'Contract', 'PaperlessBilling', 'PaymentMethod'], 16 features
+2026-01-10 20:29:24,953 [INFO] Creating pipeline for logistic_regression
+2026-01-10 20:29:24,953 [INFO] logistic_regression Pipeline created
+2026-01-10 20:29:27,254 [INFO] logistic_regression CV Pipeline evaluated
+2026-01-10 20:29:27,254 [INFO] Model: logistic_regression | ROC-AUC: 0.85 ± 0.01
+2026-01-10 20:29:27,256 [INFO] logistic_regression Pipeline saved
+2026-01-10 20:29:27,256 [INFO] Creating pipeline for lightgbm
+2026-01-10 20:29:27,256 [INFO] lightgbm Pipeline created
+2026-01-10 20:34:08,631 [INFO] lightgbm CV Pipeline evaluated
+2026-01-10 20:34:08,631 [INFO] Model: lightgbm | ROC-AUC: 0.83 ± 0.01
+2026-01-10 20:34:08,633 [INFO] lightgbm Pipeline saved
+
+2026-01-10 20:54:03,812 [INFO] logistic_regression Pipeline loaded
+2026-01-10 20:54:03,872 [INFO] logistic_regression Pipeline trained
+2026-01-10 20:54:03,879 [INFO] Top features:                         feature  importance  absolute_importance
+0                        tenure   -1.304288             1.304288
+39            Contract_Two year   -0.860407             0.860407
+37      Contract_Month-to-month    0.666294             0.666294
+2                  TotalCharges    0.583851             0.583851
+16          InternetService_DSL   -0.566015             0.566015
+17  InternetService_Fiber optic    0.531933             0.531933
+1                MonthlyCharges   -0.321665             0.321665
+13             MultipleLines_No   -0.310986             0.310986
+40          PaperlessBilling_No   -0.294046             0.294046
+10               Dependents_Yes   -0.247599             0.247599

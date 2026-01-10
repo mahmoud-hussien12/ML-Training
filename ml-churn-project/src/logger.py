@@ -5,6 +5,8 @@ def getLogger():
     global logger
     if logger is None:
         logging.basicConfig(
+            filename="logs/info.log",
+            filemode="a",
             level=logging.INFO,
             format='%(asctime)s [%(levelname)s] %(message)s'
         )
