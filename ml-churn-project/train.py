@@ -36,8 +36,8 @@ def main():
     
     #get feature columns
     numerical_features, categorical_features = build_features.get_feature_columns(cfg)
-    logger.log_info(f"Numerical features: {numerical_features}")
-    logger.log_info(f"Categorical features: {categorical_features}")
+    logger.log_info(f"Numerical features: {numerical_features}, {len(numerical_features)} features")
+    logger.log_info(f"Categorical features: {categorical_features}, {len(categorical_features)} features")
     
     #create pipeline
     model = pipe.get_model(cfg['model']['type'], cfg['model']['params'])
