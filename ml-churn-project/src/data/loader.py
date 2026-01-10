@@ -22,7 +22,7 @@ def split_data(
     Splits the data into training, validation and test sets.
     """
     X = df.drop(target_col, axis=1)
-    y = df[target_col]
+    y = df[target_col].map({"No": 0, "Yes": 1})
     val_size = val_size / (1-test_size)
     X_train_val, X_test, y_train_val, y_test = train_test_split(X, y, test_size=test_size, random_state=random_state, stratify=y)
     X_train, X_val, y_train, y_val = train_test_split(X_train_val, y_train_val, test_size=val_size, random_state=random_state, stratify=y_train_val)

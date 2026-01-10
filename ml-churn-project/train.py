@@ -8,6 +8,8 @@ sys.path.append(os.getcwd())
 from src import logger
 from src import config
 from src.data import loader
+from src.models import pipeline as pipe
+from src.features import build_features
 def main():
     parser = argparse.ArgumentParser(description="Run the training pipeline")
     parser.add_argument("--config", type=str, default="configs/base.yaml", help="Path to the config file")
@@ -32,6 +34,32 @@ def main():
     logger.log_info(f"Data val counts: {val_counts} with percentage: {val_percentage}")
     logger.log_info(f"Data test counts: {test_counts} with percentage: {test_percentage}")
     
+    #get feature columns
+    numerical_features, categorical_features = build_features.get_feature_columns(cfg)
+    logger.log_info(f"Numerical features: {numerical_features}")
+    logger.log_info(f"Categorical features: {categorical_features}")
+    
+    #create pipeline
+    model = pipe.get_model(cfg['model']['type'], cfg['model']['params'])
+    pipeline = pipe.create_pipeline(numerical_features, categorical_features, model)
+    logger.log_info(f"Pipeline created")
+    
+    #train pipeline
+    pipeline.fit(X_train, y_train)
+    logger.log_info(f"Pipeline trained")
+    
+    #evaluate pipeline
+    y_pred = pipeline.predict(X_val)
+    logger.log_info(f"Pipeline evaluated")
+    
+    #get metrics
+    metrics = pipe.get_metrics(y_val, y_pred) 
+    logger.log_info(f"Metrics: {metrics}")
+    
+    #save pipeline
+    pipe.save_pipeline(pipeline, cfg['model']['type'], cfg['project']['random_seed'])
+    logger.log_info(f"Pipeline saved")
+
 if __name__ == "__main__":
     main()
 
