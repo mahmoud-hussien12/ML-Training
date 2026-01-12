@@ -141,10 +141,10 @@ Evaluation is performed on the **validation set** only.
 ### 1️⃣ Install dependencies
 ```bash
 poetry install
-````
+```
 
 ### 2️⃣ Train the model
-
+* Models are evaluated using stratified cross-validation and tracked with MLflow for reproducibility and comparison.
 ```bash
 python train.py --config configs/base.yaml
 ```
@@ -184,7 +184,7 @@ These artifacts can be reused for:
 * Kept preprocessing inside sklearn pipelines to avoid leakage
 * Chose Logistic Regression as a strong, interpretable baseline
 * Avoided notebooks for training to simulate real production workflows
-* Selected model based on ROC-AUC metric
+* Model selection is performed based on cross-validated ROC-AUC and business considerations, with the final production model logged separately in MLflow.
 * Selected top features using feature importance for lightgbm and cofficient for logistic regression
 * Selected threshold based on recall
 ---

@@ -35,48 +35,49 @@ Name: proportion, dtype: float64
        [174, 200]])}
 2026-01-10 18:08:27,337 [INFO] logistic_regression Pipeline saved
 ------------------------------------------------------------------------------
-2026-01-10 22:03:14,274 [INFO] Loading config from configs/base.yaml
-2026-01-10 22:03:14,277 [INFO] Config: churn_prediction, seed: 42
-2026-01-10 22:03:14,277 [INFO] Loading raw data from data/raw/WA_Fn-UseC_-Telco-Customer-Churn.csv
-2026-01-10 22:03:14,306 [INFO] Data loaded with shape: (7043, 21)
-2026-01-10 22:03:14,306 [INFO] Splitting data into train, val, test sets
-2026-01-10 22:03:14,321 [INFO] Data split into train: 4225, val: 1409, test: 1409
-2026-01-10 22:03:14,406 [INFO] Data train counts: Churn
+2026-01-12 22:31:39,277 [INFO] Loading config from configs/base.yaml
+2026-01-12 22:31:39,284 [INFO] Config: churn_prediction, seed: 42
+2026-01-12 22:31:39,285 [INFO] Loading raw data from data/raw/WA_Fn-UseC_-Telco-Customer-Churn.csv
+2026-01-12 22:31:39,325 [INFO] Data loaded with shape: (7043, 21)
+2026-01-12 22:31:39,325 [INFO] Splitting data into train, val, test sets
+2026-01-12 22:31:39,351 [INFO] Data split into train: 4225, val: 1409, test: 1409
+2026-01-12 22:31:39,449 [INFO] Data saved to data/processed/train.csv, data/processed/val.csv, data/processed/test.csv
+2026-01-12 22:31:39,452 [INFO] Data train counts: Churn
 0    3104
 1    1121
 Name: count, dtype: int64 with percentage: Churn
 0    73.467456
 1    26.532544
 Name: proportion, dtype: float64
-2026-01-10 22:03:14,407 [INFO] Data val counts: Churn
+2026-01-12 22:31:39,453 [INFO] Data val counts: Churn
 0    1035
 1     374
 Name: count, dtype: int64 with percentage: Churn
 0    73.456352
 1    26.543648
 Name: proportion, dtype: float64
-2026-01-10 22:03:14,407 [INFO] Data test counts: Churn
+2026-01-12 22:31:39,454 [INFO] Data test counts: Churn
 0    1035
 1     374
 Name: count, dtype: int64 with percentage: Churn
 0    73.456352
 1    26.543648
 Name: proportion, dtype: float64
-2026-01-10 22:03:14,407 [INFO] Numerical features: ['tenure', 'MonthlyCharges', 'TotalCharges'], 3 features
-2026-01-10 22:03:14,407 [INFO] Categorical features: ['gender', 'SeniorCitizen', 'Partner', 'Dependents', 'PhoneService', 'MultipleLines', 'InternetService', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV', 'StreamingMovies', 'Contract', 'PaperlessBilling', 'PaymentMethod'], 16 features
-2026-01-10 22:03:14,407 [INFO] Creating pipeline for logistic_regression
-2026-01-10 22:03:14,407 [INFO] logistic_regression Pipeline created
-2026-01-10 22:03:16,834 [INFO] logistic_regression CV Pipeline evaluated
-2026-01-10 22:03:16,834 [INFO] Model: logistic_regression | ROC-AUC: 0.85 ± 0.01
-2026-01-10 22:03:16,835 [INFO] logistic_regression Pipeline saved
-2026-01-10 22:03:16,835 [INFO] Creating pipeline for lightgbm
-2026-01-10 22:03:16,835 [INFO] lightgbm Pipeline created
-2026-01-10 22:08:47,927 [INFO] lightgbm CV Pipeline evaluated
-2026-01-10 22:08:47,927 [INFO] Model: lightgbm | ROC-AUC: 0.83 ± 0.01
-2026-01-10 22:08:47,929 [INFO] lightgbm Pipeline saved
-2026-01-10 22:08:47,929 [INFO] logistic_regression Pipeline loaded
-2026-01-10 22:08:47,998 [INFO] logistic_regression Pipeline trained
-2026-01-10 22:08:48,006 [INFO] Top features:                         feature  importance  absolute_importance
+2026-01-12 22:31:39,455 [INFO] Numerical features: ['tenure', 'MonthlyCharges', 'TotalCharges'], 3 features
+2026-01-12 22:31:39,455 [INFO] Categorical features: ['gender', 'SeniorCitizen', 'Partner', 'Dependents', 'PhoneService', 'MultipleLines', 'InternetService', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV', 'StreamingMovies', 'Contract', 'PaperlessBilling', 'PaymentMethod'], 16 features
+2026-01-12 22:31:39,512 [INFO] Creating pipeline for logistic_regression
+2026-01-12 22:31:39,512 [INFO] logistic_regression Pipeline created
+2026-01-12 22:31:43,320 [INFO] logistic_regression CV Pipeline evaluated
+2026-01-12 22:31:43,320 [INFO] Model: logistic_regression | ROC-AUC: 0.85 ± 0.01
+2026-01-12 22:31:46,447 [INFO] logistic_regression Pipeline saved
+2026-01-12 22:31:46,448 [INFO] Creating pipeline for lightgbm
+2026-01-12 22:31:46,448 [INFO] lightgbm Pipeline created
+2026-01-12 22:36:36,990 [INFO] lightgbm CV Pipeline evaluated
+2026-01-12 22:36:36,990 [INFO] Model: lightgbm | ROC-AUC: 0.83 ± 0.01
+2026-01-12 22:36:39,811 [INFO] lightgbm Pipeline saved
+2026-01-12 22:36:42,296 [INFO] logistic_regression Pipeline loaded
+2026-01-12 22:36:42,351 [INFO] logistic_regression Pipeline trained
+2026-01-12 22:36:42,361 [INFO] Top features:                         feature  importance  absolute_importance
 0                        tenure   -1.304288             1.304288
 39            Contract_Two year   -0.860407             0.860407
 37      Contract_Month-to-month    0.666294             0.666294
@@ -87,24 +88,80 @@ Name: proportion, dtype: float64
 13             MultipleLines_No   -0.310986             0.310986
 40          PaperlessBilling_No   -0.294046             0.294046
 10               Dependents_Yes   -0.247599             0.247599
-------------------------------------------------------------------------------------------------------------
-
-2026-01-11 00:19:30,403 [INFO] Loading config from configs/base.yaml
-2026-01-11 00:19:30,406 [INFO] Config: churn_prediction, seed: 42
-2026-01-11 00:19:30,407 [INFO] Loading data
-2026-01-11 00:19:30,432 [INFO] Data loaded
-2026-01-11 00:19:30,434 [INFO] Loading model
-2026-01-11 00:19:30,437 [INFO] Model loaded
-2026-01-11 00:19:30,550 [INFO] Model trained
-2026-01-11 00:19:30,551 [INFO] Thresholding
-2026-01-11 00:19:30,559 [INFO] Thresholded with precision: 0.5271028037383177, recall: 0.7540106951871658, roc_auc: 0.8428530832622904, threshold: 0.3
-2026-01-11 00:19:30,569 [INFO] Thresholded with precision: 0.5724137931034483, recall: 0.6657754010695187, roc_auc: 0.8428530832622904, threshold: 0.4
-2026-01-11 00:19:30,576 [INFO] Thresholded with precision: 0.6509433962264151, recall: 0.553475935828877, roc_auc: 0.8428530832622904, threshold: 0.5
-2026-01-11 00:19:30,585 [INFO] Thresholded with precision: 0.7122641509433962, recall: 0.4037433155080214, roc_auc: 0.8428530832622904, threshold: 0.6
-2026-01-11 00:19:30,594 [INFO] Thresholded with precision: 0.7176470588235294, recall: 0.16310160427807488, roc_auc: 0.8428530832622904, threshold: 0.7
-2026-01-11 00:19:30,595 [INFO] selected threshold: 0.3 as it has the highest recall: 0.7540106951871658 which is decreaseing the customer churning by catching it then taking preventive actions
-2026-01-11 00:19:30,595 [INFO] Confusion matrix
-2026-01-11 00:19:30,597 [INFO] Confusion matrix: [[782 253]
+-----------------------------------------------------------------------------------
+2026-01-12 22:51:36,753 [INFO] Loading config from configs/base.yaml
+2026-01-12 22:51:36,758 [INFO] Config: churn_prediction, seed: 42
+2026-01-12 22:51:36,758 [INFO] Loading data
+2026-01-12 22:51:36,793 [INFO] Data loaded
+2026-01-12 22:51:36,796 [INFO] Loading model
+2026-01-12 22:51:36,799 [INFO] Model loaded
+2026-01-12 22:51:36,863 [INFO] Model trained
+2026-01-12 22:51:36,863 [INFO] Predicting
+2026-01-12 22:51:36,879 [INFO] Predicted
+2026-01-12 22:51:36,879 [INFO] Saving y_proba
+2026-01-12 22:51:36,880 [INFO] y_proba saved
+2026-01-12 22:51:36,880 [INFO] Thresholding
+2026-01-12 22:51:36,888 [INFO] Thresholded with precision: 0.5271028037383177, recall: 0.7540106951871658, roc_auc: 0.8428530832622904, threshold: 0.3
+2026-01-12 22:51:36,894 [INFO] Thresholded with precision: 0.5724137931034483, recall: 0.6657754010695187, roc_auc: 0.8428530832622904, threshold: 0.4
+2026-01-12 22:51:36,902 [INFO] Thresholded with precision: 0.6509433962264151, recall: 0.553475935828877, roc_auc: 0.8428530832622904, threshold: 0.5
+2026-01-12 22:51:36,909 [INFO] Thresholded with precision: 0.7122641509433962, recall: 0.4037433155080214, roc_auc: 0.8428530832622904, threshold: 0.6
+2026-01-12 22:51:36,916 [INFO] Thresholded with precision: 0.7176470588235294, recall: 0.16310160427807488, roc_auc: 0.8428530832622904, threshold: 0.7
+2026-01-12 22:51:36,916 [INFO] selected threshold: 0.3 as it has the highest recall: 0.7540106951871658 which is decreaseing the customer churning by catching it then taking preventive actions
+2026-01-12 22:51:36,916 [INFO] Confusion matrix
+2026-01-12 22:51:36,919 [INFO] Confusion matrix: [[782 253]
  [ 92 282]]
-2026-01-11 00:19:30,597 [INFO] Saving model artifact
-2026-01-11 00:19:30,605 [INFO] Model artifact saved
+2026-01-12 22:51:36,919 [INFO] Saving model artifact
+2026-01-12 22:51:36,924 [INFO] Model artifact saved
+-----------------------------------------------------------------------------2026-01-13 00:40:33,695 [INFO] Loading config from configs/base.yaml
+2026-01-13 00:40:33,698 [INFO] Config: churn_prediction, seed: 42
+2026-01-13 00:40:33,698 [INFO] Loading raw data from data/raw/WA_Fn-UseC_-Telco-Customer-Churn.csv
+2026-01-13 00:40:33,730 [INFO] Data loaded with shape: (7043, 21)
+2026-01-13 00:40:33,730 [INFO] Splitting data into train, val, test sets
+2026-01-13 00:40:33,745 [INFO] Data split into train: 4225, val: 1409, test: 1409
+2026-01-13 00:40:33,851 [INFO] Data saved to data/processed/train.csv, data/processed/val.csv, data/processed/test.csv
+2026-01-13 00:40:33,853 [INFO] Data train counts: Churn
+0    3104
+1    1121
+Name: count, dtype: int64 with percentage: Churn
+0    73.467456
+1    26.532544
+Name: proportion, dtype: float64
+2026-01-13 00:40:33,854 [INFO] Data val counts: Churn
+0    1035
+1     374
+Name: count, dtype: int64 with percentage: Churn
+0    73.456352
+1    26.543648
+Name: proportion, dtype: float64
+2026-01-13 00:40:33,855 [INFO] Data test counts: Churn
+0    1035
+1     374
+Name: count, dtype: int64 with percentage: Churn
+0    73.456352
+1    26.543648
+Name: proportion, dtype: float64
+2026-01-13 00:40:33,855 [INFO] Numerical features: ['tenure', 'MonthlyCharges', 'TotalCharges'], 3 features
+2026-01-13 00:40:33,855 [INFO] Categorical features: ['gender', 'SeniorCitizen', 'Partner', 'Dependents', 'PhoneService', 'MultipleLines', 'InternetService', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV', 'StreamingMovies', 'Contract', 'PaperlessBilling', 'PaymentMethod'], 16 features
+2026-01-13 00:40:33,890 [INFO] Creating pipeline for logistic_regression
+2026-01-13 00:40:33,890 [INFO] logistic_regression Pipeline created
+2026-01-13 00:40:37,026 [INFO] logistic_regression CV Pipeline evaluated
+2026-01-13 00:40:37,026 [INFO] Model: logistic_regression | ROC-AUC: 0.85 ± 0.01
+2026-01-13 00:40:40,139 [INFO] logistic_regression Pipeline saved
+2026-01-13 00:40:40,140 [INFO] Creating pipeline for lightgbm
+2026-01-13 00:40:40,141 [INFO] lightgbm Pipeline created
+2026-01-13 00:45:43,788 [INFO] lightgbm CV Pipeline evaluated
+2026-01-13 00:45:43,788 [INFO] Model: lightgbm | ROC-AUC: 0.83 ± 0.01
+2026-01-13 00:45:47,070 [INFO] lightgbm Pipeline saved
+2026-01-13 00:45:49,815 [INFO] logistic_regression Pipeline loaded
+2026-01-13 00:45:49,891 [INFO] logistic_regression Pipeline trained
+2026-01-13 00:45:49,898 [INFO] Top features:                         feature  importance  absolute_importance
+0                        tenure   -1.304288             1.304288
+39            Contract_Two year   -0.860407             0.860407
+37      Contract_Month-to-month    0.666294             0.666294
+2                  TotalCharges    0.583851             0.583851
+16          InternetService_DSL   -0.566015             0.566015
+17  InternetService_Fiber optic    0.531933             0.531933
+1                MonthlyCharges   -0.321665             0.321665
+13             MultipleLines_No   -0.310986             0.310986
+40          PaperlessBilling_No   -0.294046             0.294046
+10               Dependents_Yes   -0.247599             0.247599

@@ -1,0 +1,14 @@
+artifact_uri: file:///home/camelcase/Training/ML-Training/ml-churn-project/mlruns/229904569474637165/cbace194b0ba4a3d8b8de7510b02eaa5/artifacts
+end_time: 1768257947070
+entry_point_name: ''
+experiment_id: '229904569474637165'
+lifecycle_stage: active
+run_id: cbace194b0ba4a3d8b8de7510b02eaa5
+run_name: lightgbm
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1768257640144
+status: 3
+tags: []
+user_id: camelcase

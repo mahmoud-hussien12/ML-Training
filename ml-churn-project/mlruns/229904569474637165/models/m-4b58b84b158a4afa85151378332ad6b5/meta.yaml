@@ -1,0 +1,10 @@
+artifact_location: file:///home/camelcase/Training/ML-Training/ml-churn-project/mlruns/229904569474637165/models/m-4b58b84b158a4afa85151378332ad6b5/artifacts
+creation_timestamp: 1768257637037
+experiment_id: '229904569474637165'
+last_updated_timestamp: 1768257640136
+model_id: m-4b58b84b158a4afa85151378332ad6b5
+model_type: null
+name: model
+source_run_id: 710882f32fcb458aa65cc992bdc7b124
+status: 2
+status_message: null

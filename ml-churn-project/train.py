@@ -1,6 +1,7 @@
 import argparse
 import sys
 import os
+import mlflow
 
 # Ensure the current directory is in the python path so we can import src
 sys.path.append(os.getcwd())
@@ -11,6 +12,7 @@ from src.data import loader
 from src.models import pipeline as pipe
 from src.features import build_features
 from src.evaluation import cross_validation
+from mlops.mlflow_utils import setup_mlflow
 
 def main():
     parser = argparse.ArgumentParser(description="Run the training pipeline")
@@ -46,42 +48,65 @@ def main():
     #create pipeline
     highest_auc = 0
     best_model = "logistic_regression"
+    best_pipeline = None
     model_names = cfg['training']['active_models']
+    setup_mlflow("churn_model_comparison")
     for model_name in model_names:
         logger.log_info(f"Creating pipeline for {model_name}")
         model = pipe.get_model(model_name, cfg['model'][model_name]['params'])
         pipeline = pipe.create_pipeline(numerical_features, categorical_features, model)
         logger.log_info(f"{model_name} Pipeline created")
-        #train pipeline
-        #pipeline.fit(X_train, y_train)
-        #logger.log_info(f"{model_name} Pipeline trained")
-    
-        #evaluate pipeline
-        #y_pred = pipeline.predict(X_val)
-        #logger.log_info(f"{model_name} Pipeline evaluated")
-    
-        #get metrics
-        #metrics = pipe.get_metrics(y_val, y_pred) 
-        #logger.log_info(f"{model_name} Metrics: {metrics}")
-        mean_auc, std_auc = cross_validation.evaluate_with_cv(pipeline, X_train, y_train)
-        logger.log_info(f"{model_name} CV Pipeline evaluated")
-        logger.log_info(f"Model: {model_name} | ROC-AUC: {mean_auc:.2f} ± {std_auc:.2f}")
-        if mean_auc > highest_auc:
-            highest_auc = mean_auc
-            best_model = model_name
         
-        #save pipeline
-        pipe.save_pipeline(pipeline, model_name, cfg['project']['random_seed'])
-        logger.log_info(f"{model_name} Pipeline saved")
+        with mlflow.start_run(run_name=model_name):  
+            mlflow.log_param("model", model_name)
+            mlflow.log_params(cfg['model'][model_name]['params'])
+            #train pipeline
+            #pipeline.fit(X_train, y_train)
+            #logger.log_info(f"{model_name} Pipeline trained")
+        
+            #evaluate pipeline
+            #y_pred = pipeline.predict(X_val)
+            #logger.log_info(f"{model_name} Pipeline evaluated")
+        
+            #get metrics
+            #metrics = pipe.get_metrics(y_val, y_pred) 
+            #logger.log_info(f"{model_name} Metrics: {metrics}")
+            mean_auc, std_auc = cross_validation.evaluate_with_cv(pipeline, X_train, y_train)
+            mlflow.log_metric("roc_auc_mean", mean_auc)
+            mlflow.log_metric("roc_auc_std", std_auc)
+            logger.log_info(f"{model_name} CV Pipeline evaluated")
+            logger.log_info(f"Model: {model_name} | ROC-AUC: {mean_auc:.2f} ± {std_auc:.2f}")
+            # highest auc is best as it is the best one identify the churn TPR and FPR
+            if mean_auc > highest_auc:
+                highest_auc = mean_auc
+                best_pipeline = pipeline
+                best_model = model_name
+            #save pipeline
+            mlflow.sklearn.log_model(
+                sk_model=pipeline,
+                artifact_path="model"
+            )
+            #pipe.save_pipeline(pipeline, model_name, cfg['project']['random_seed'])
+            logger.log_info(f"{model_name} Pipeline saved")
     
+    with mlflow.start_run(run_name="best_model"):
+        mlflow.log_param("model", best_model)
+        mlflow.log_params(cfg['model'][best_model]['params'])
+        mlflow.log_metric("final_roc_auc", highest_auc)
+        mlflow.sklearn.log_model(
+            sk_model=best_pipeline,
+            artifact_path="model"
+        )
     #load the pipeline
     model = pipe.load_pipeline(best_model, cfg['project']['random_seed'])
     logger.log_info(f"{best_model} Pipeline loaded")
     model.fit(X_train, y_train)
-    logger.log_info(f"{best_model} Pipeline trained")
+    logger.log_info(f"{best_model} Pipeline trained")    
     #get top features
     top_features = pipe.get_top_features(model, 10)
     logger.log_info(f"Top features: {top_features}")
+
+                
     
 if __name__ == "__main__":
     main()
