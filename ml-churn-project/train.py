@@ -93,18 +93,17 @@ def main():
         mlflow.log_param("model", best_model)
         mlflow.log_params(cfg['model'][best_model]['params'])
         mlflow.log_metric("final_roc_auc", highest_auc)
+        #load the pipeline
+        logger.log_info(f"{best_model} Pipeline loaded")
+        best_pipeline.fit(X_train, y_train)
+        logger.log_info(f"{best_model} Pipeline trained")    
+        #get top features
+        top_features = pipe.get_top_features(best_pipeline, 10)
+        logger.log_info(f"Top features: {top_features}")
         mlflow.sklearn.log_model(
             sk_model=best_pipeline,
             artifact_path="model"
         )
-    #load the pipeline
-    model = pipe.load_pipeline(best_model, cfg['project']['random_seed'])
-    logger.log_info(f"{best_model} Pipeline loaded")
-    model.fit(X_train, y_train)
-    logger.log_info(f"{best_model} Pipeline trained")    
-    #get top features
-    top_features = pipe.get_top_features(model, 10)
-    logger.log_info(f"Top features: {top_features}")
 
                 
     
