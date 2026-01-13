@@ -218,3 +218,5 @@ Name: proportion, dtype: float64
 13             MultipleLines_No   -0.310986             0.310986
 40          PaperlessBilling_No   -0.294046             0.294046
 10               Dependents_Yes   -0.247599             0.247599
+2026-01-13 23:30:45,974 [INFO] prediction_request
+2026-01-13 23:30:46,009 [INFO] prediction_response

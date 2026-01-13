@@ -178,6 +178,12 @@ These artifacts can be reused for:
 
 ---
 
+### Input Validation & Monitoring
+
+The API validates input feature schemas to prevent malformed requests and logs prediction statistics for basic monitoring and debugging.
+
+----
+
 ## 🔍 Key Engineering Decisions
 
 * Used **stratified splits** due to class imbalance
@@ -198,6 +204,15 @@ If this were extended further:
 * Threshold optimization based on business costs
 * Model monitoring and drift detection
 * Deployment as a FastAPI service
+
+---
+
+### Production Considerations
+
+* Strict feature schema validation to prevent malformed inference requests
+* Logging of prediction outputs for basic monitoring and debugging
+* Health check endpoint for deployment readiness
+* Config-driven model selection and parameters
 
 ---
 
