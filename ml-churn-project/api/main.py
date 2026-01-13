@@ -1,10 +1,11 @@
 from fastapi import FastAPI, HTTPException
 import mlflow.sklearn
-from api.schemas import ChurnRequest, ChurnResponse
+from api.schemas import ChurnRequest, ChurnResponse, ExplainRequest
 from api.feature_schema import EXPECTED_FEATURES
 import pandas as pd
 from asgi_correlation_id import CorrelationIdMiddleware, correlation_id
 
+from api.llm_service.llm_client import LLMClient
 from api import logger
 app = FastAPI(title="Churn Prediction API")
 app.add_middleware(CorrelationIdMiddleware)
@@ -55,3 +56,10 @@ def predict(request: ChurnRequest):
 @app.get("/health")
 def health_check():
     return {"status": "ok"}
+
+llm = LLMClient()
+
+@app.post("/explain")
+def explain(request: ExplainRequest):
+    explanation = llm.generate_explanation(request.features, request.prediction)
+    return {"explanation": explanation}

@@ -216,6 +216,15 @@ If this were extended further:
 
 ---
 
+### LLM Integration (Work in Progress)
+
+* Modular LLM client abstraction
+* Prompt templates stored separately
+* Designed for future API-based LLM providers
+* Focus on explainability for business users
+
+---
+
 ## 👤 Author
 
 Built by a senior software engineer transitioning into Machine Learning Engineering,

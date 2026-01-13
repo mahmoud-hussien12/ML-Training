@@ -6,3 +6,7 @@ class ChurnRequest(BaseModel):
 
 class ChurnResponse(BaseModel):
     churn_probability: float
+
+class ExplainRequest(BaseModel):
+    features: Dict[str, float | str | int]
+    prediction: str
