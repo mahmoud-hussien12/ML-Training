@@ -27,3 +27,98 @@
 2026-01-14 01:22:27,369 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
 2026-01-14 01:22:47,590 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
 2026-01-14 01:23:14,586 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 01:42:50,490 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 01:42:58,631 [INFO] 021100223e48452889a04fae049061fb LLM explanation requested None
+2026-01-14 01:44:05,752 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 01:44:09,517 [INFO] f6b35a6c5ef94a4da9f16dfed935e642 LLM explanation requested None
+2026-01-14 01:45:03,036 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 01:45:18,397 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 01:45:21,977 [INFO] c244f5991a2d47f98f23832351b4f8cc LLM explanation requested None
+2026-01-14 01:45:40,573 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 01:45:42,679 [INFO] 6b2a0d4ae3f64e0fad77c924e4aa12a4 LLM explanation requested None
+2026-01-14 01:45:50,428 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 01:45:54,471 [INFO] 5a40573242554698ac89448b43a098b5 LLM explanation requested None
+2026-01-14 01:45:58,326 [INFO] 5a40573242554698ac89448b43a098b5 LLM explanation generated None
+2026-01-14 01:49:21,919 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 01:49:31,435 [INFO] 0339328575b247ddb9234e02da641fd1 LLM explanation requested 
+2026-01-14 01:49:34,464 [INFO] 0339328575b247ddb9234e02da641fd1 LLM explanation generated 
+2026-01-14 01:50:27,153 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 01:50:35,462 [INFO] 1ad032a44e394aa49669fc269e099e47 LLM explanation requested 
+2026-01-14 01:50:35,463 [INFO] 1ad032a44e394aa49669fc269e099e47 LLM explanation generated 
+2026-01-14 01:50:48,559 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 01:50:53,490 [INFO] bd3e6f6413534f2fa0bd23d9eab8c679 LLM explanation requested 
+2026-01-14 01:50:53,490 [INFO] bd3e6f6413534f2fa0bd23d9eab8c679 LLM explanation generated 
+2026-01-14 01:51:09,860 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 01:51:15,147 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 01:51:18,405 [INFO] c6f7973e36c6462bbd708523adc56795 LLM explanation requested 
+2026-01-14 01:51:21,282 [INFO] c6f7973e36c6462bbd708523adc56795 LLM explanation generated 
+2026-01-14 01:53:23,583 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 01:53:26,550 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 01:53:31,434 [INFO] 476954ea567b477b9077515af4098a57 LLM explanation requested 
+2026-01-14 01:53:31,434 [INFO] 476954ea567b477b9077515af4098a57 LLM explanation generated 
+2026-01-14 01:55:36,518 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 01:57:29,642 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 01:58:31,725 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+INFO:api.logger:prediction_request
+INFO:api.logger:prediction_response
+INFO:api.logger:prediction_request
+INFO:api.logger:prediction_response
+INFO:api.logger:model loaded
+INFO:api.logger:prediction_request
+INFO:api.logger:prediction_response
+INFO:api.logger:model loaded
+2026-01-14 02:20:53,777 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 02:20:59,686 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 02:21:06,930 [INFO] 0ec38aaadd2c420e9b24730f3ebf5754 prediction_request {'features': {'tenure': 10, 'MonthlyCharges': 20, 'TotalCharges': 200, 'gender': 'Male', 'SeniorCitizen': 0, 'Partner': 'No', 'Dependents': 'No', 'PhoneService': 'Yes', 'MultipleLines': 'No', 'InternetService': 'Fiber optic', 'OnlineSecurity': 'No', 'OnlineBackup': 'No', 'DeviceProtection': 'No', 'TechSupport': 'No', 'StreamingTV': 'No', 'StreamingMovies': 'No', 'Contract': 'Month-to-month', 'PaperlessBilling': 'Yes', 'PaymentMethod': 'Electronic check'}, 'missing_features': set(), 'extra_features': set()}
+2026-01-14 02:21:06,953 [INFO] 0ec38aaadd2c420e9b24730f3ebf5754 prediction_response {'churn_probability': np.float64(0.7080202497318282)}
+2026-01-14 02:21:13,180 [INFO] 42a8ab0b29c3471ba423846268db63dc prediction_request {'features': {'tenure': 10, 'MonthlyCharges': 20, 'TotalCharges': 200, 'gender': 'Male', 'SeniorCitizen': 0, 'Partner': 'No', 'Dependents': 'No', 'PhoneService': 'Yes', 'MultipleLines': 'No', 'InternetService': 'Fiber optic', 'OnlineSecurity': 'No', 'OnlineBackup': 'No', 'DeviceProtection': 'No', 'TechSupport': 'No', 'StreamingTV': 'No', 'StreamingMovies': 'No', 'Contract': 'Month-to-month', 'PaperlessBilling': 'Yes', 'PaymentMethod': 'Electronic check'}, 'missing_features': set(), 'extra_features': set()}
+2026-01-14 02:21:13,198 [INFO] 42a8ab0b29c3471ba423846268db63dc prediction_response {'churn_probability': np.float64(0.7080202497318282)}
+2026-01-14 02:26:10,935 [INFO] 63b5a217d4e846d2b4e4c24d7e7e52ce LLM explanation requested None
+2026-01-14 02:26:13,336 [INFO] None HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" {}
+2026-01-14 02:26:13,363 [INFO] 63b5a217d4e846d2b4e4c24d7e7e52ce LLM explanation generated None
+2026-01-14 02:27:50,540 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 02:28:05,677 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 02:28:05,831 [INFO] 126fd8f088e3454c80e4583a5cda7266 LLM explanation requested None
+2026-01-14 02:28:05,831 [INFO] 126fd8f088e3454c80e4583a5cda7266 LLM explanation generated None
+2026-01-14 02:28:28,259 [INFO] e276c9312f4f4102a326b2b934232b18 LLM explanation requested None
+2026-01-14 02:28:28,260 [INFO] e276c9312f4f4102a326b2b934232b18 LLM explanation generated None
+2026-01-14 02:29:01,096 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 02:29:05,852 [INFO] 060299630c2b4fcc8d228c65d4679037 LLM explanation requested 
+2026-01-14 02:29:05,852 [INFO] 060299630c2b4fcc8d228c65d4679037 LLM explanation generated 
+2026-01-14 02:29:21,566 [INFO] 236fe5e308844a4180ead22ee6353121 LLM explanation requested 
+2026-01-14 02:29:21,567 [INFO] 236fe5e308844a4180ead22ee6353121 LLM explanation generated 
+2026-01-14 02:29:54,764 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 02:30:20,440 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 02:30:30,020 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 02:30:34,305 [INFO] 29ea1505de71483d8fd90d9f5674679f LLM explanation requested {'features': {'tenure': 10, 'MonthlyCharges': 20, 'TotalCharges': 200, 'gender': 'Male', 'SeniorCitizen': 0, 'Partner': 'No', 'Dependents': 'No', 'PhoneService': 'Yes', 'MultipleLines': 'No', 'InternetService': 'Fiber optic', 'OnlineSecurity': 'No', 'OnlineBackup': 'No', 'DeviceProtection': 'No', 'TechSupport': 'No', 'StreamingTV': 'No', 'StreamingMovies': 'No', 'Contract': 'Month-to-month', 'PaperlessBilling': 'Yes', 'PaymentMethod': 'Electronic check'}, 'prediction': '1'}
+2026-01-14 02:30:36,761 [INFO] None HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" 
+2026-01-14 02:30:36,784 [INFO] 29ea1505de71483d8fd90d9f5674679f LLM explanation generated 
+2026-01-14 02:32:06,952 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 02:32:10,870 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 02:32:19,132 [INFO] 3b08f9ba3f5a46d0838af0ac3604819a LLM explanation requested {'features': {'tenure': 10, 'MonthlyCharges': 20, 'TotalCharges': 200, 'gender': 'Male', 'SeniorCitizen': 0, 'Partner': 'No', 'Dependents': 'No', 'PhoneService': 'Yes', 'MultipleLines': 'No', 'InternetService': 'Fiber optic', 'OnlineSecurity': 'No', 'OnlineBackup': 'No', 'DeviceProtection': 'No', 'TechSupport': 'No', 'StreamingTV': 'No', 'StreamingMovies': 'No', 'Contract': 'Month-to-month', 'PaperlessBilling': 'Yes', 'PaymentMethod': 'Electronic check'}, 'prediction': '1'}
+2026-01-14 02:32:21,652 [INFO]  HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK" 
+2026-01-14 02:32:21,668 [INFO] 3b08f9ba3f5a46d0838af0ac3604819a LLM explanation generated 
+2026-01-14 02:43:24,558 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 02:43:29,609 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 02:43:40,246 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 02:43:55,673 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 02:44:12,154 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 02:44:23,418 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 02:44:27,149 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 02:45:17,497 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 02:45:26,282 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 02:45:43,105 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 02:45:47,881 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 02:46:49,883 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 02:47:07,573 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 02:47:21,669 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 02:48:14,167 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 02:49:02,151 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 02:49:23,884 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 02:50:28,044 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 02:50:56,315 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 02:51:21,218 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 02:51:52,469 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 02:54:10,547 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 02:54:14,879 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}
+2026-01-14 02:54:18,785 [INFO] None model loaded {'model_type': 'Pipeline', 'model_uri': 'runs:/f57ccdd696be465cbc196f94cdeede6e/model', 'model_version': 'v1'}

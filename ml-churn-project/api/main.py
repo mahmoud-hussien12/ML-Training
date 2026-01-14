@@ -4,9 +4,9 @@ from api.schemas import ChurnRequest, ChurnResponse, ExplainRequest
 from api.feature_schema import EXPECTED_FEATURES
 import pandas as pd
 from asgi_correlation_id import CorrelationIdMiddleware, correlation_id
-
 from api.llm_service.llm_client import LLMClient
 from api import logger
+
 app = FastAPI(title="Churn Prediction API")
 app.add_middleware(CorrelationIdMiddleware)
 
@@ -61,5 +61,8 @@ llm = LLMClient()
 
 @app.post("/explain")
 def explain(request: ExplainRequest):
+    if not llm.should_explain(request.prediction):
+        return {"explanation": "Customer is unlikely to churn."}
     explanation = llm.generate_explanation(request.features, request.prediction)
     return {"explanation": explanation}
+

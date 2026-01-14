@@ -222,6 +222,16 @@ If this were extended further:
 * Prompt templates stored separately
 * Designed for future API-based LLM providers
 * Focus on explainability for business users
+* Integrated LLM-based explanation service with prompt templating, API abstraction, cost controls, and fallback handling.
+
+---
+
+### LLM Safety & Cost Controls
+
+* Latency measurement
+* Token usage logging
+* Confidence-based gating
+* Timeout & graceful fallback
 
 ---
 
