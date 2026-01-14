@@ -1,1 +1,4 @@
 mlruns/*
+api/logs/*
+logs/*
+llm_service/.env
