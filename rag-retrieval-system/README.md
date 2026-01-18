@@ -1,1 +1,2 @@
-# RAG From Scratch
+# RAG Retrieval System
+This project implements a basic Retrieval-Augmented Generation (RAG) pipeline with document ingestion, chunking, embedding, and FAISS-based retrieval. The goal is to understand and control each retrieval stage before introducing rerankers, agents, and production APIs.”
