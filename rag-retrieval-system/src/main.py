@@ -1,6 +1,7 @@
 from ingestion.load_documents import load_documents
 from chunking.text_splitter import split_documents
 from embeddings.embedder import embed_texts
+from embeddings.openai_embedding import OpenAIEmbedding
 from vector_store.faiss_store import (
     build_faiss_index,
     save_index,
@@ -80,3 +81,7 @@ if __name__ == "__main__":
         index_path=INDEX_PATH,
         top_k=5,
     )
+
+    model = OpenAIEmbeddingModel()
+    vectors = model.embed_documents(["Hello world", "RAG systems are cool"])
+    print(vectors.shape)
