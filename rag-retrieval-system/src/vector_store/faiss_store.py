@@ -1,32 +1,57 @@
 import faiss
 import numpy as np
-from typing import List, Tuple
+from typing import List, Tuple, Dict, Any
 import os
 import pickle
 
-def build_faiss_index(embeddings: List[List[float]]):
-    vectors = np.array(embeddings).astype('float32')
-    index = faiss.IndexFlatL2(vectors.shape[1])
-    index.add(vectors)
-    return index
+class FaissVectorStore:
+    def __init__(self,
+        embedding_dim: int,
+        index_path: str = "data/index/faiss_index/index.faiss",
+        metadata_path: str = "data/index/faiss_index/metadata.pkl"
+    ):
+        self.index_path = index_path
+        self.metadata_path = metadata_path
+        self.embedding_dim = embedding_dim
 
+        self.index = faiss.IndexFlatIP(embedding_dim)
 
-def save_index(index: faiss.Index, chunks: List[str], index_path: str):    
-    os.makedirs(os.path.dirname(index_path), exist_ok=True)
-    faiss.write_index(index, os.path.join(index_path, "index.faiss"))
-    with open(os.path.join(index_path, "chunks.pkl"), "wb") as f:
-        pickle.dump(chunks, f)
+        self.metadata: List[Dict[str, Any]] = []
+    
+    def add(self, embeddings: np.ndarray, metadata: List[Dict[str, Any]]):
 
+        assert embeddings.shape[0] == len(metadata)
+        assert embeddings.shape[1] == self.embedding_dim
 
-def load_index(index_path: str) -> Tuple[faiss.Index, List[str]]:
-    index = faiss.read_index(os.path.join(index_path, "index.faiss"))
-    with open(os.path.join(index_path, "chunks.pkl"), "rb") as f:
-        chunks = pickle.load(f)
-    return index, chunks
+        faiss.normalize_L2(embeddings)
+        self.index.add(embeddings)
+        self.metadata.extend(metadata)
+    
+    def search(self, query_embedding: np.ndarray, top_k: int = 5) -> List[Tuple[float, Dict[str, Any]]]:
+        query_embedding = query_embedding.reshape(1, -1)
+        faiss.normalize_L2(query_embedding)
+        scores, indices = self.index.search(query_embedding, top_k)
+        
+        results = []
+        for score, index in zip(scores[0], indices[0]):
+            if index == -1:
+                continue
+            results.append((float(score), self.metadata[index]))
+        return results
+    
+    def save(self):
+        os.makedirs(os.path.dirname(self.index_path), exist_ok=True)
+        faiss.write_index(self.index, self.index_path)
+        with open(self.metadata_path, "wb") as f:
+            pickle.dump(self.metadata, f)
+    
+    def load(self):
+        if not os.path.exists(self.index_path) or not os.path.exists(self.metadata_path):
+            raise FileNotFoundError("Index or metadata file not found")
+        
+        self.index = faiss.read_index(self.index_path)
 
-
-def search_index(index: faiss.Index, query_embedding: List[List[float]], chunks: List[str], top_k: int = 5) -> List[str]:
-    query_vectors = np.array(query_embedding).astype('float32')
-    distances, indices = index.search(query_vectors, top_k) 
-    return [chunks[i] for i in indices[0]]
+        with open(self.metadata_path, "rb") as f:
+            self.metadata = pickle.load(f)
+    
 

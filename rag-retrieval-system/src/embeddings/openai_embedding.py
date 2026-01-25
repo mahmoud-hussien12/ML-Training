@@ -1,4 +1,4 @@
-from embedding_model import EmbeddingModel
+from src.embeddings.embedding_model import EmbeddingModel
 from openai import OpenAI
 import os
 
@@ -6,7 +6,7 @@ from typing import List
 import numpy as np
 
 class OpenAIEmbedding(EmbeddingModel):
-    def __init__(self, model: str = "text-embedding-ada-002", batch_size: int = 32):
+    def __init__(self, model: str = "text-embedding-3-small", batch_size: int = 32):
         self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
         self.model = model
         self.batch_size = batch_size
