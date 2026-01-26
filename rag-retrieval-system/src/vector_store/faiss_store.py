@@ -6,7 +6,7 @@ import pickle
 
 class FaissVectorStore:
     def __init__(self,
-        embedding_dim: int,
+        embedding_dim: int = 384,
         index_path: str = "data/index/faiss_index/index.faiss",
         metadata_path: str = "data/index/faiss_index/metadata.pkl"
     ):

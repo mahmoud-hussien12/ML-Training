@@ -1,2 +1,0 @@
-Hello world
-RAG systems are cool

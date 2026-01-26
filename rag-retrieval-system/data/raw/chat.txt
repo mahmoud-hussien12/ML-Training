@@ -1,0 +1,19 @@
+# Dummy Chat Log: Geography Trivia Practice
+
+**Alex:** Yo, I’m bored. Want to quiz each other on world capitals for the exam tomorrow?
+**Sam:** Sure! I'll start. What’s the capital of France?
+**Alex:** That's too easy. Paris is the capital of France. My turn: What about Japan?
+**Sam:** Tokyo is the capital of Japan. Everyone knows that one!
+**Alex:** Okay, smarty. What is the capital of Australia?
+**Sam:** A lot of people think it's Sydney, but Canberra is actually the capital of Australia.
+**Alex:** Nice. What about Brazil?
+**Sam:** Brasília is the capital of Brazil. It was actually a planned city.
+**Alex:** Interesting. I just read that Jakarta isn't the main one for Indonesia anymore.
+**Sam:** Yeah, Nusantara is the capital of Indonesia now, though Jakarta is still huge.
+**Alex:** Right. Hey, do you know the capital of Canada?
+**Sam:** Ottawa is the capital of Canada. Don't confuse it with Toronto!
+**Alex:** I won't. What about Egypt? 
+**Sam:** Cairo is the capital of Egypt. It's right by the Nile.
+**Alex:** Correct. Last one for now: What is the capital of Germany?
+**Sam:** Berlin is the capital of Germany. 
+**Alex:** Spot on. We're definitely going to ace this test.

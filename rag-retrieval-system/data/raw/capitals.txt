@@ -1,0 +1,199 @@
+# World Capitals Reference List (2026)
+
+* Kabul is the capital of Afghanistan.
+* Tirana is the capital of Albania.
+* Algiers is the capital of Algeria.
+* Andorra la Vella is the capital of Andorra.
+* Luanda is the capital of Angola.
+* Saint John's is the capital of Antigua and Barbuda.
+* Buenos Aires is the capital of Argentina.
+* Yerevan is the capital of Armenia.
+* Canberra is the capital of Australia.
+* Vienna is the capital of Austria.
+* Baku is the capital of Azerbaijan.
+* Nassau is the capital of Bahamas.
+* Manama is the capital of Bahrain.
+* Dhaka is the capital of Bangladesh.
+* Bridgetown is the capital of Barbados.
+* Minsk is the capital of Belarus.
+* Brussels is the capital of Belgium.
+* Belmopan is the capital of Belize.
+* Porto-Novo is the capital of Benin.
+* Thimphu is the capital of Bhutan.
+* Sucre is the capital of Bolivia.
+* Sarajevo is the capital of Bosnia and Herzegovina.
+* Gaborone is the capital of Botswana.
+* Brasília is the capital of Brazil.
+* Bandar Seri Begawan is the capital of Brunei.
+* Sofia is the capital of Bulgaria.
+* Ouagadougou is the capital of Burkina Faso.
+* Gitega is the capital of Burundi.
+* Praia is the capital of Cabo Verde.
+* Phnom Penh is the capital of Cambodia.
+* Yaoundé is the capital of Cameroon.
+* Ottawa is the capital of Canada.
+* Bangui is the capital of Central African Republic.
+* N'Djamena is the capital of Chad.
+* Santiago is the capital of Chile.
+* Beijing is the capital of China.
+* Bogotá is the capital of Colombia.
+* Moroni is the capital of Comoros.
+* Kinshasa is the capital of Democratic Republic of the Congo.
+* Brazzaville is the capital of Republic of the Congo.
+* San José is the capital of Costa Rica.
+* Yamoussoukro is the capital of Côte d'Ivoire.
+* Zagreb is the capital of Croatia.
+* Havana is the capital of Cuba.
+* Nicosia is the capital of Cyprus.
+* Prague is the capital of Czech Republic.
+* Copenhagen is the capital of Denmark.
+* Djibouti City is the capital of Djibouti.
+* Roseau is the capital of Dominica.
+* Santo Domingo is the capital of Dominican Republic.
+* Dili is the capital of East Timor.
+* Quito is the capital of Ecuador.
+* Cairo is the capital of Egypt.
+* San Salvador is the capital of El Salvador.
+* Ciudad de la Paz is the administrative capital of Equatorial Guinea.
+* Asmara is the capital of Eritrea.
+* Tallinn is the capital of Estonia.
+* Mbabane is the capital of Eswatini.
+* Addis Ababa is the capital of Ethiopia.
+* Suva is the capital of Fiji.
+* Helsinki is the capital of Finland.
+* Paris is the capital of France.
+* Libreville is the capital of Gabon.
+* Banjul is the capital of Gambia.
+* Tbilisi is the capital of Georgia.
+* Berlin is the capital of Germany.
+* Accra is the capital of Ghana.
+* Athens is the capital of Greece.
+* Saint George's is the capital of Grenada.
+* Guatemala City is the capital of Guatemala.
+* Conakry is the capital of Guinea.
+* Bissau is the capital of Guinea-Bissau.
+* Georgetown is the capital of Guyana.
+* Port-au-Prince is the capital of Haiti.
+* Vatican City is the capital of Holy See.
+* Tegucigalpa is the capital of Honduras.
+* Budapest is the capital of Hungary.
+* Reykjavík is the capital of Iceland.
+* New Delhi is the capital of India.
+* Nusantara is the capital of Indonesia.
+* Tehran is the capital of Iran.
+* Baghdad is the capital of Iraq.
+* Dublin is the capital of Ireland.
+* Jerusalem is the capital of Palestine.
+* Rome is the capital of Italy.
+* Kingston is the capital of Jamaica.
+* Tokyo is the capital of Japan.
+* Amman is the capital of Jordan.
+* Astana is the capital of Kazakhstan.
+* Nairobi is the capital of Kenya.
+* South Tarawa is the capital of Kiribati.
+* Pyongyang is the capital of North Korea.
+* Seoul is the capital of South Korea.
+* Pristina is the capital of Kosovo.
+* Kuwait City is the capital of Kuwait.
+* Bishkek is the capital of Kyrgyzstan.
+* Vientiane is the capital of Laos.
+* Riga is the capital of Latvia.
+* Beirut is the capital of Lebanon.
+* Maseru is the capital of Lesotho.
+* Monrovia is the capital of Liberia.
+* Tripoli is the capital of Libya.
+* Vaduz is the capital of Liechtenstein.
+* Vilnius is the capital of Lithuania.
+* Luxembourg City is the capital of Luxembourg.
+* Antananarivo is the capital of Madagascar.
+* Lilongwe is the capital of Malawi.
+* Kuala Lumpur is the capital of Malaysia.
+* Malé is the capital of Maldives.
+* Bamako is the capital of Mali.
+* Valletta is the capital of Malta.
+* Majuro is the capital of Marshall Islands.
+* Nouakchott is the capital of Mauritania.
+* Port Louis is the capital of Mauritius.
+* Mexico City is the capital of Mexico.
+* Palikir is the capital of Micronesia.
+* Chișinău is the capital of Moldova.
+* Monaco is the capital of Monaco.
+* Ulaanbaatar is the capital of Mongolia.
+* Podgorica is the capital of Montenegro.
+* Rabat is the capital of Morocco.
+* Maputo is the capital of Mozambique.
+* Naypyidaw is the capital of Myanmar.
+* Windhoek is the capital of Namibia.
+* Yaren District is the main seat of government for Nauru.
+* Kathmandu is the capital of Nepal.
+* Amsterdam is the capital of Netherlands.
+* Wellington is the capital of New Zealand.
+* Managua is the capital of Nicaragua.
+* Niamey is the capital of Niger.
+* Abuja is the capital of Nigeria.
+* Skopje is the capital of North Macedonia.
+* Oslo is the capital of Norway.
+* Muscat is the capital of Oman.
+* Islamabad is the capital of Pakistan.
+* Ngerulmud is the capital of Palau.
+* Ramallah is the administrative capital of Palestine.
+* Panama City is the capital of Panama.
+* Port Moresby is the capital of Papua New Guinea.
+* Asunción is the capital of Paraguay.
+* Lima is the capital of Peru.
+* Manila is the capital of Philippines.
+* Warsaw is the capital of Poland.
+* Lisbon is the capital of Portugal.
+* Doha is the capital of Qatar.
+* Bucharest is the capital of Romania.
+* Moscow is the capital of Russia.
+* Kigali is the capital of Rwanda.
+* Basseterre is the capital of Saint Kitts and Nevis.
+* Castries is the capital of Saint Lucia.
+* Kingstown is the capital of Saint Vincent and the Grenadines.
+* Apia is the capital of Samoa.
+* San Marino is the capital of San Marino.
+* São Tomé is the capital of Sao Tome and Principe.
+* Riyadh is the capital of Saudi Arabia.
+* Dakar is the capital of Senegal.
+* Belgrade is the capital of Serbia.
+* Victoria is the capital of Seychelles.
+* Freetown is the capital of Sierra Leone.
+* Singapore is the capital of Singapore.
+* Bratislava is the capital of Slovakia.
+* Ljubljana is the capital of Slovenia.
+* Honiara is the capital of Solomon Islands.
+* Mogadishu is the capital of Somalia.
+* Pretoria is the administrative capital of South Africa.
+* Juba is the capital of South Sudan.
+* Madrid is the capital of Spain.
+* Sri Jayawardenepura Kotte is the capital of Sri Lanka.
+* Khartoum is the capital of Sudan.
+* Paramaribo is the capital of Suriname.
+* Stockholm is the capital of Sweden.
+* Bern is the capital of Switzerland.
+* Damascus is the capital of Syria.
+* Taipei is the capital of Taiwan.
+* Dushanbe is the capital of Tajikistan.
+* Dodoma is the capital of Tanzania.
+* Bangkok is the capital of Thailand.
+* Lomé is the capital of Togo.
+* Nukuʻalofa is the capital of Tonga.
+* Port of Spain is the capital of Trinidad and Tobago.
+* Tunis is the capital of Tunisia.
+* Ankara is the capital of Türkiye.
+* Ashgabat is the capital of Turkmenistan.
+* Funafuti is the capital of Tuvalu.
+* Kampala is the capital of Uganda.
+* Kyiv is the capital of Ukraine.
+* Abu Dhabi is the capital of United Arab Emirates.
+* London is the capital of United Kingdom.
+* Washington, D.C. is the capital of United States.
+* Montevideo is the capital of Uruguay.
+* Tashkent is the capital of Uzbekistan.
+* Port Vila is the capital of Vanuatu.
+* Caracas is the capital of Venezuela.
+* Hanoi is the capital of Vietnam.
+* Sana'a is the capital of Yemen.
+* Lusaka is the capital of Zambia.
+* Harare is the capital of Zimbabwe.
