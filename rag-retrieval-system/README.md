@@ -97,6 +97,19 @@ Vector databases are core infrastructure in RAG systems. Explicit control over i
 
 ---
 
+## Retrieval Tuning
+
+Implemented a configurable retrieval layer with support for:
+
+ * Top-k tuning to balance recall vs precision
+ * Score thresholds to filter weak semantic matches
+ * Metadata-based filtering (e.g. source-level constraints)
+
+Retrieval behavior can be tuned without retraining embeddings, enabling
+fast iteration and safer RAG behavior in production systems.
+
+---
+
 ## 🧠 Design Principles
 
 * **Explicit abstractions** over magic frameworks
@@ -117,7 +130,6 @@ Vector databases are core infrastructure in RAG systems. Explicit control over i
 
 ## 🚧 Next Steps (Planned)
 
-* Retrieval pipeline (top-k tuning, score thresholds)
 * RAG prompt construction
 * Answer generation
 * Optional reranking
