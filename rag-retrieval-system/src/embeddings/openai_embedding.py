@@ -7,7 +7,7 @@ import numpy as np
 
 class OpenAIEmbedding(EmbeddingModel):
     def __init__(self, model: str = "text-embedding-3-small", batch_size: int = 32):
-        self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"), base_url="http://localhost:11434/v1")
         self.model = model
         self.batch_size = batch_size
     
@@ -21,6 +21,6 @@ class OpenAIEmbedding(EmbeddingModel):
         return np.array(embeddings, dtype=np.float32)
     
     def embed_query(self, query: str) -> np.ndarray:
-        response = self.client.embeddings.create(model=self.model, input=query)
+        response = self.client.embeddings.create(model=self.model, input=[query])
 
         return np.array(response.data[0].embedding, dtype=np.float32)

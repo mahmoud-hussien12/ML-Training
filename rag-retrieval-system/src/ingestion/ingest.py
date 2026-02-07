@@ -1,6 +1,7 @@
 from src.ingestion.document_loader import load_text_files
 from src.chunking.chunker import chunk_documents
 from src.embeddings.text_embedding import TextEmbedder
+from src.embeddings.openai_embedding import OpenAIEmbedding
 from src.vector_store.faiss_store import FaissVectorStore
 
 
@@ -28,7 +29,7 @@ def ingest_documents(
             "text": chunk["text"],
         })
 
-    embedder = TextEmbedder()
+    embedder = OpenAIEmbedding(model="llama3.2:1b")
     embeddings = embedder.embed_documents(texts)
 
     vector_store.add(embeddings, metadatas)

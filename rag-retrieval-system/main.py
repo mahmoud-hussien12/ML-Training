@@ -6,6 +6,7 @@ from src.vector_store.faiss_store import FaissVectorStore
 from src.ingestion.ingest import ingest_documents
 from src.retrieval.retriever import Retriever
 from src.retrieval.tuning import try_retrieval_configs
+from src.rag.rag_pipeline import RAGPipeline
 
 def main():
     DATA_PATH = "data/raw/"
@@ -41,5 +42,12 @@ def main():
         print(config, "→", output["num_chunks"])
     print(output["chunks"])
 
+
+    print("########## RAG Pipeline ##########")
+    retriever = Retriever(vector_store, top_k=5, score_threshold=0.75, source_filter="capitals.txt")
+    rag_pipeline = RAGPipeline(retriever)
+    result = rag_pipeline.run(query)
+    print(result)
+    
 if __name__ == "__main__":
     main()

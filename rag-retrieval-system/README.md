@@ -110,6 +110,20 @@ fast iteration and safer RAG behavior in production systems.
 
 ---
 
+## RAG Query Pipeline
+
+Implemented a full Retrieval-Augmented Generation pipeline:
+
+ * Query embedding
+ * Tuned retrieval (top-k, thresholds, metadata filters)
+ * Explicit prompt construction with retrieved context
+ * Deterministic LLM generation (temperature=0)
+
+The pipeline is fully inspectable, enabling debugging of retrieval quality,
+prompt grounding, and answer faithfulness.
+
+---
+
 ## 🧠 Design Principles
 
 * **Explicit abstractions** over magic frameworks
