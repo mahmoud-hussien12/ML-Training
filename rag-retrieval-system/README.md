@@ -144,8 +144,6 @@ prompt grounding, and answer faithfulness.
 
 ## 🚧 Next Steps (Planned)
 
-* RAG prompt construction
-* Answer generation
 * Optional reranking
 * Monitoring & evaluation hooks
 
