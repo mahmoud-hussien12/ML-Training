@@ -10,9 +10,10 @@ requires-python = ">=3.12, <3.15"
 dependencies = [
     "openai (>=2.15.0,<3.0.0)",
     "faiss-cpu (>=1.13.2,<2.0.0)",
-    "fastembed (>=0.7.4,<0.8.0)"
+    "fastembed (>=0.7.4,<0.8.0)",
+    "torch (>=2.11.0,<3.0.0)",
+    "sentence-transformers (>=5.3.0,<6.0.0)"
 ]
-
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
@@ -27,3 +28,12 @@ packages = [
 
 [tool.poetry.scripts]
 start = "main:main"
+
+[[tool.poetry.source]]
+name = "pytorch_cpu"
+url = "https://download.pytorch.org/whl/cpu"
+priority = "explicit"
+
+
+[tool.poetry.dependencies]
+torch = {source = "pytorch_cpu"}

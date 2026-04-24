@@ -124,6 +124,23 @@ prompt grounding, and answer faithfulness.
 
 ---
 
+## Reranking Layer
+
+Added a cross-encoder reranker to improve retrieval precision.
+
+Pipeline:
+FAISS (fast recall) → Cross-encoder (precision) → LLM
+
+Benefits:
+- More relevant context
+- Reduced hallucination risk
+- Better answer quality
+
+Trade-off:
+- Increased latency due to additional model inference
+ 
+---
+
 ## 🧠 Design Principles
 
 * **Explicit abstractions** over magic frameworks
@@ -142,10 +159,24 @@ prompt grounding, and answer faithfulness.
 
 ---
 
-## 🚧 Next Steps (Planned)
+## Evaluation
 
-* Optional reranking
-* Monitoring & evaluation hooks
+Implemented basic evaluation for both retrieval and answer quality.
+
+### Retrieval Evaluation
+- Keyword-based recall
+- Measures whether relevant concepts appear in retrieved chunks
+
+### Answer Evaluation
+- Simple overlap scoring with expected answers
+- Used as a lightweight proxy for correctness
+
+These evaluations allow isolating issues between retrieval and generation.
+
+Future improvements:
+- LLM-based evaluation (faithfulness, relevance)
+- Human evaluation
+- Benchmark datasets
 
 ---
 

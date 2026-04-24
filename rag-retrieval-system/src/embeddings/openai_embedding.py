@@ -24,3 +24,27 @@ class OpenAIEmbedding(EmbeddingModel):
         response = self.client.embeddings.create(model=self.model, input=[query])
 
         return np.array(response.data[0].embedding, dtype=np.float32)
+    
+    def encode_image(self, path: str) -> str:
+        with open(path, "rb") as image_file:
+            return base64.b64encode(image_file.read()).decode('utf-8')
+    
+    def convert_excel(self, file_path: str) -> np.ndarray:
+        image_base64 = self.encode_image(file_path)
+
+        response = self.client.chat.completions.create(
+            model="llama3.2-vision",
+            messages=[
+                {
+                    "role": "user",
+                    "content": [
+                        {"type": "text", "text": "Identify shipping categories and prices by zone in this contract. Return valid JSON."},
+                        {
+                            "type": "image_url",
+                            "image_url": {"url": f"data:image/png;base64,{image_base64}"},
+                        },
+                    ],
+                },
+            ],
+        )
+        return response.choices[0].message.content
